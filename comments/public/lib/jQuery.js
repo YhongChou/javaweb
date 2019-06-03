@@ -1,0 +1,1 @@
+window.alert('你访问到jQ了')
