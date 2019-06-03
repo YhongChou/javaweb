@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<canvas width="600" height="800"></canvas>
+<script>
+    var myCanvas=document.querySelector('canvas');
+    var ctx=myCanvas.getContext('2d');
+    var data=[10,20,30,40];
+    // var data = [6, 30, 10, 8];
+
+    var angleList=[];
+    var total=0;
+    data.forEach(function (item,i) {
+        total+=item;
+    });
+    data.forEach(function (item,i) {
+        var angle=Math.PI*2*(item/total);
+        angleList.push(angle);
+    })
+    var getRandomColor = function () {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+        // console.log(+ r + + g +  b );
+    };
+
+    console.log(angleList);
+    var w=ctx.canvas.width;
+    var h=ctx.canvas.height;
+    var x0=w/2;
+    var y0=h/2;
+    var startAngel=0;
+    angleList.forEach(function (item,i) {
+        var endAngel=startAngel+item;
+        ctx.beginPath();
+        ctx.moveTo(x0,y0);
+        ctx.arc(x0,y0,150,startAngel,endAngel);
+
+        ctx.fillStyle = getRandomColor();
+        ctx.fill();
+        startAngel=endAngel;
+        // ctx.stroke();
+        //调用了才会有返回值
+        console.log(getRandomColor());
+    });
+</script>
+
+
+</body>
+</html>

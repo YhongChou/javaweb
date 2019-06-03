@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单标签</title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			隐藏字段：<input type="hidden" name="id" value=""/><br />
+			用户名：<input type="text" name="username" readonly="readonly" value="金时" maxlength="4" placeholder="例如：坂田银时"/><br />
+			密码：<input type="password" name="password"/><br />
+			确认密码：<input type="password" name="rewritepassword"/><br />
+			性别：<input type="radio" name="sex" value="男"/>男
+				<input type="radio" name="sex" value="女" checked="checked"/>女<br />
+			爱好：<input type="checkbox" name="hobby" value="吃冰激凌"/>吃冰激凌
+				<input type="checkbox" name="hobby" value="打架"/>打架
+				<input type="checkbox" name="hobby" value="上电视"/>上电视<br />
+			头像：<input type="file" name="file"/><br />
+			籍贯：<select name="province" />
+				<option>--请选择--</option>
+				<option value="北京" selected="selected">北京</option>
+				<option value="上海">上海</option>
+				<option value="上海">广州</option>
+		</select><br />
+
+			自我介绍：
+			<textarea name="自我介绍">
+				
+			</textarea><br />
+			提交按钮：<input type="submit" value="注册"/><br />
+			重置按钮：<input type="reset" value="重头写吧垃圾"/><br />
+		</form>
+	</body>
+</html>

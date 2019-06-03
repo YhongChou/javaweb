@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <style>
+        .map{
+            width:800px;
+            height: 600px;
+            background-color:#ccc;
+            position: relative;//其子元素在地图上完全脱离文档
+        }
+    </style>
+</head>
+<body>
+<!-----------------画地图----------------->
+<div class="map"></div>
+<!--//先有食物再有的蛇,但是好像调用顺序不影响？-->
+<script src="food.js"></script>
+<script src="snake.js"></script>
+<script src="game.js"></script>
+<script>
+    <!--蛇吃到食物后，删除原对象，创建并初始化一个新的事物对象-->
+
+//     (function(){
+//
+//     }());//函数放一个括号，定义和调用都在一起，整体性更好，；一定要加。
+//     (function () {
+//
+//     })();//最后的括号调用，
+//     (fu)
+
+    var gm=new Game(document.querySelector(".map"));//是.map不是map
+    //gm也是一实例对象,传进Game
+    gm.init();
+
+    //外部测试代码
+   // var fd=new Food();// 测试在函数外是否可调用window
+    // console.log(fd.width);
+    //得到食物对象，调用一次Food方法，产生一个食物
+    // fd.init(document.querySelector(".map"));//返回符合条件的第一个元素
+
+    // var snake=new Snake();
+    // snake.init(document.querySelector(".map"));//在地图上看到蛇
+    // snake.move(fd,document.querySelector(".map"));
+    // snake.init(document.querySelector(".map"));//在地图上看到蛇
+    // snake.move(fd,document.querySelector(".map"));
+    // snake.init(document.querySelector(".map"));//在地图上看到蛇
+
+    // setInterval(function () {
+    //
+    //     snake.move(fd,document.querySelector(".map"));
+    //     snake.init(document.querySelector(".map"));
+    // },150);
+
+
+    // snake.init(document.querySelector(".map"));
+    // snake.act(fd,document.querySelector(".map"))
+
+    //fd.init(document.querySelector(".map"));
+    //console.log(fd.x+"===>"+fd.y)
+
+
+</script>
+</body>
+</html>
