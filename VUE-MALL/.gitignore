@@ -1,0 +1,4 @@
+node_modules
+.idea:WS放了一些编辑器的默认设置，没有必要生成
+.vscode:vs的配置文件
+.git：存了一些历史版本
